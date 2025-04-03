@@ -1,0 +1,12 @@
+<ul>
+    <form id="quiz" method="post" action="/result" onsubmit="return confirm('Sure to Submit')" onreset="return confirm('Sure to Reset')"/>
+        
+        <div class="buttons">
+            <input class="w3-button w3-black w3-margin" type="submit" value="Submit">
+            <input class="w3-button w3-black w3-margin" type="reset" value="Reset">
+        </div>
+    </form>
+    {{#each students}}
+        <li>{{this.name}}: {{this.score}}</li>
+    {{/each}}
+</ul>
